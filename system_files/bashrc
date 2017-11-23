@@ -1,0 +1,26 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
+alias ds='cd /media/sf_devel_share'
+alias md='cd /root/devel_code'
+alias mdt='cd /root/devel_code/trunk'
+alias mdb='cd /root/devel_code/branches'
+
+export EDITOR=vim
+
+alias vi='vim'
+set path=/usr/local/bin
+set TERMINFO /usr/share/terminfo
+set TERM xtermc
+set TERM ansi
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+

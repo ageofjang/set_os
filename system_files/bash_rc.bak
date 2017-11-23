@@ -1,0 +1,18 @@
+# .bashrc
+
+# User specific aliases and functions
+
+alias rm='rm -rf'
+alias cp='cp -rf'
+alias mv='mv -f'
+alias vi='/usr/bin/vim'
+
+alias tc='cd /root/peta_code/trunk'
+alias pt='cd /root/peta_code'
+
+alias mkctags='rm -f tags;find . -name "*[.ch]" | ctags -L-'
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi

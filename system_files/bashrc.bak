@@ -1,0 +1,163 @@
+# .bashrc
+
+# User specific aliases and functions
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then 
+	    . /etc/bashrc
+fi
+
+export EDITOR="vim"
+
+alias o1='ssh -l  root o1'
+alias o2='ssh -l  root o2'
+alias o3='ssh -l  root o3'
+alias t1='ssh -l  root t1'
+alias t2='ssh -l  root t2'
+alias t3='ssh -l  root t3'
+alias t4='ssh -l  root t4'
+alias t5='ssh -l  root t5'
+alias s1='ssh -l  root s1'
+alias s2='ssh -l  root s2'
+alias s3='ssh -l  root s3'
+alias s4='ssh -l  root s4'
+alias s5='ssh -l  root s5'
+alias v1='ssh -l  root v1'
+alias v2='ssh -l  root v2'
+alias v3='ssh -l  root v3'
+alias h1='ssh -l  root H1'
+alias h2='ssh -l  root H2'
+alias h3='ssh -l  root H3'
+alias h4='ssh -l  root H4'
+alias u1='ssh -l  root u1'
+alias u2='ssh -l  root u2'
+alias u3='ssh -l  root u3'
+alias u4='ssh -l  root u4'
+alias u5='ssh -l  root u5'
+alias u6='ssh -l  root u6'
+alias u7='ssh -l  root u7'
+alias u8='ssh -l  root u8'
+alias p1='ssh -l  root p1'
+alias p2='ssh -l  root p2'
+alias p3='ssh -l  root p3'
+alias p4='ssh -l  root p4'
+alias a1='ssh -l  root a1'
+
+alias m1='ssh -l  root m1'
+alias m2='ssh -l  root m2'
+alias m3='ssh -l  root m3'
+
+alias y1='ssh -l  root y1'
+alias y2='ssh -l  root y2'
+alias y3='ssh -l  root y3'
+alias y4='ssh -l  root y4'
+alias y5='ssh -l  root y5'
+alias y6='ssh -l  root y6'
+
+alias f1='ssh -l  root f1'
+alias f2='ssh -l  root f2'
+alias f3='ssh -l  root f3'
+alias f4='ssh -l  root f4'
+
+alias x1='ssh -l  root x1'
+alias x2='ssh -l  root x2'
+alias x3='ssh -l  root x3'
+alias x4='ssh -l  root x4'
+
+alias j1='ssh -l  root j1'
+
+alias r1='ssh -l  root r1'
+alias r2='ssh -l  root r2'
+alias r3='ssh -l  root r3'
+alias r4='ssh -l  root r4'
+alias r5='ssh -l  root r5'
+alias r6='ssh -l  root r6'
+
+alias b1='ssh -l  root b1'
+alias b2='ssh -l  root b2'
+alias b3='ssh -l  root b3'
+
+alias g1='ssh -l  root g1'
+alias g2='ssh -l  root g2'
+alias g3='ssh -l  root g3'
+alias g4='ssh -l  root g4'
+alias g5='ssh -l  root g5'
+alias g6='ssh -l  root g6'
+
+alias k1='ssh -l root k1'
+alias k2='ssh -l root k2'
+alias k3='ssh -l root k3'
+alias k4='ssh -l root k4'
+alias k5='ssh -l root k5'
+alias k6='ssh -l root k6'
+alias k7='ssh -l root k7'
+alias k8='ssh -l root k8'
+
+alias mi3='ssh -l ndmnwg mi3'
+
+alias cs='telnet 10.1.1.111 7000'
+alias ncs='telnet 10.1.1.112 7000'
+alias admin_cs='telnet 10.1.1.111'
+alias admin_ncs='telnet 10.1.1.112'
+
+alias cls='clear'
+alias pspts='ps -ef | grep pts'
+alias rebashrc='source /root/.bashrc'
+alias mkcscope='/root/users/jjs/vim/mkcscope.sh'
+alias mkctags='/root/users/jjs/vim/mkctags.sh'
+
+alias jjs='cd /root/users/jjs/'
+alias sanique_license='cat /usr/local/sanique/config/sanique.license'
+alias rtest='cd /root/users/sanique_release_test/Linux/RT_Script/'
+alias sim='cd /root/users/sanique_release_test/Linux/RT_Script/s4/sim_test_f2_dir/'
+alias dentry='cd /root/users/sanique_release_test/Linux/RT_Script/dentry/'
+alias killtest='/root/users/sanique_release_test/Linux/RT_Script/s4/sim_test_f2_dir/killtest'
+
+alias ver='cat /etc/redhat-release;uname -a'
+
+#alias l.='ls -d .*'
+#alias ls="ls -F --color=tty"
+#alias rmexe='rm `ls -al |grep sanique|grep rwx|awk '{print $9}'`'
+#ulimit -c 0
+ulimit -c unlimited
+alias vi="vim"
+alias vissh="vi ~/.ssh/known_hosts2"
+alias ps.eo='ps -eo pid,args,wchan | more'
+alias ps.eo.bk='ps -eo pid,args,wchan > ps.eo.pid.args.wchan.$HOSTNAME'
+alias rmlog='rm -f /usr/local/sanique/log/.log*'
+alias vimsg='vi /var/log/messages'
+alias vilog='vi /usr/local/sanique/log/sanique.log'
+alias taillog='tail -f /usr/local/sanique/log/sanique.log'
+alias tailmsg='tail -f /var/log/messages'
+alias viconf='vi /usr/local/sanique/config/sanique.conf'
+alias vitab='vi /usr/local/sanique/config/sanique.fstab'
+alias catpanic='cat /proc/sys/kernel/panic'
+alias setpanic='echo 10 > /proc/sys/kernel/panic'
+alias unsetpanic='echo 0 > /proc/sys/kernel/panic'
+alias clrlog='sanique_clr_log; /root/bin/clrmsg.sh'
+
+PATH=$PATH:$HOME/bin:$HOME/bin/sim_test_f2_dir:/usr/local/sanique/bin:/usr/local/sanique/cvm_util
+export PATH
+
+unset USERNAME
+
+# User specific environment and startup programs
+CVSROOT=:pserver:macrocvs@mi3:/home/CVS
+export CVSROOT
+
+RESULT_IMAGE_PATH=/mnt/cfm/test_home
+ORACLE_IMAGE_PATH=/mnt/ext2/test_home
+export RESULT_IMAGE_PATH ORACLE_IMAGE_PATH
+
+#unset PS1
+#PS1='\e[0m\e[1;33m\u\e[0m@\e[1;36m\h\e[0m:\w\n\$ '
+#export PS1
+#export PS1='\n\e[1;34m\u\e[0m@\e[1;31m\h\e[0m:\e[1;33m\w\e[0m\n[\! $?]\$ '
+#export PS1='\e[0m[\e[1;33m\u\e[0m@\e[1;36m\h\e[0m:\w]\n\$ '
+
+unset SYSDIR
+SYSDIR=${HOME}/.cs
+export SYSDIR
+
+export LS_COLORS="di=01;34"
+export PS1="[\u@\h \W]\$ "

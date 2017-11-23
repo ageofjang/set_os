@@ -1,0 +1,31 @@
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+	. ~/.bashrc
+fi
+
+export CSCOPE_EDITOR=vim
+# User specific environment and startup programs
+PKG_CONFIG_PATH=/usr/local/update/lib/pkgconfig/:$PKG_CONFIG_PATH
+export PKG_CONFIG_PATH
+
+PATH=/usr/local/bin:$PATH
+PATH=$HOME/bin:$PATH
+PATH=$HOME/usr/bin:$PATH
+PATH=/usr/local/update/bin:$PATH
+PATH=/usr/local/update:$PATH
+
+export PATH
+unset USERNAME
+
+LD_LIBRARY_PATH=/usr/local/update/lib/:$LD_LIBRARY_PATH
+#export LD_LIBRARY_PATH
+
+#export openssl_CFLAGS='-I/usr/local/openssl/include/openssl'
+#export openssl_LIBS='-static -L/usr/local/openssl/lib64 -lssl -lcrypto -ldl -lz'
+
+
+export LS_COLORS="di=01;34"
+
+ulimit -c unlimited

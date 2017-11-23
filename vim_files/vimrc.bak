@@ -1,0 +1,124 @@
+syntax on
+set filetype=sql
+set nu
+set cindent
+set si
+set ai
+set sw=4
+set ts=4
+set nobackup
+set bs=2
+set nocp
+
+set textwidth=79
+set wrap
+set nowrapscan
+set nobackup
+set history=999
+set sc 
+
+set sts=0
+set magic
+
+set sol
+set mps+=<:>
+set sm
+set background=dark
+"set paste!
+"imap { {<CR><CR>}<up>
+imap ( ()<left>
+imap [ []<left>
+
+set hls
+set nows
+set ic
+set scs
+
+set laststatus=2
+set statusline=%h%F%m%r%=[%l:%c(%p%%)]
+
+colorscheme evening
+set nocompatible 
+set foldmethod=manual
+set viminfo='20,"50
+filet on 
+
+"==================================================="
+"grep
+"==================================================="
+nmap ,g :grep -r -n "<cword>" ./* <CR><CR>:cw<CR>
+nmap ,j :vertical stjump <C-R>=expand("<cword>")<CR><CR>
+
+
+"==================================================="
+"folding
+"==================================================="
+"<F1> : folding , <F2> : unfolding 
+"map <F1> v]}zf
+"map <F2> zo
+
+"==================================================="
+"tab
+"==================================================="
+map <F1> :tabnew<CR>
+map <F2> :tabn<CR>
+map <F3> :tabclose<CR>
+
+set cst
+set nocsverb
+if filereadable("./cscope.out")
+	"cs add cscope.out
+else 
+"	cs add /usr/src/kernels/cscope.out
+endif
+"source $HOME/cscope_maps.vim
+set csverb
+
+"==================================================="
+"TrinityToggle set
+"==================================================="
+nmap <F4> :TrinityToggleAll<CR><C-W><C-W>
+"==================================================="
+"Tag list
+"==================================================="
+map <F5> :Tlist<CR><C-W><C-W>
+nnoremap <silent> <F6> :TlistUpdate<CR>
+nnoremap <silent> <F7> :TlistSync<CR>
+"Tlist setting
+let Tlist_Use_Right_Window=0
+let Tlist_Inc_Winwidth=0
+"let Tlist_Auto_Open=1
+let Tlist_Display_Tag_Scope=1
+let Tlist_Display_Prototype=1
+let Tlist_Sort_Type="name"
+let Tlist_WinWidth=35
+"let Tlist_Ctags_Cmd='/bin/ctags.exe'
+
+
+"==================================================="
+"Source Explorer config
+"==================================================="
+let g:SrcExpl_gobackKey="<SPACE>"
+set wmh=0
+nmap <C-H> <C-W>h 
+nmap <C-J> <C-W>j 
+nmap <C-K> <C-W>k 
+nmap <C-L> <C-W>l 
+"nmap <C-F> <C-W>1
+
+"source exploler set
+nmap <F8> :SrcExplToggle<CR>
+let g:SrcExpl_winHeight= 10
+let g:SrcExpl_refreshTime=100
+let g:SrcExpl_jumpKey="<ENTER>"
+let g:SrcExpl_gobackKey="<SPACE>"
+let g:SrcExpl_isUpdateTags=0
+
+"==================================================="
+"NERDTree set
+"==================================================="
+let NERDTreeWinPos="left"
+nmap <F9> :NERDTreeToggle<CR>
+"==================================================="
+filetype plugin on
+"==================================================="
